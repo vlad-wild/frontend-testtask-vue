@@ -1,11 +1,49 @@
 {
-  "name": "test-task",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "test-task",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "dev": "webpack serve --mode development",
+        "build": "webpack --mode production",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.{js,vue,ts,json,css,scss,html}": "prettier --write"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@swc/core": "^1.15.1",
+        "@swc/helpers": "^0.5.17",
+        "@tailwindcss/postcss": "^4.1.17",
+        "@types/webpack-env": "^1.18.8",
+        "css-loader": "^7.1.2",
+        "html-webpack-plugin": "^5.6.4",
+        "husky": "^9.1.7",
+        "postcss": "^8.5.6",
+        "postcss-loader": "^8.2.0",
+        "postcss-preset-env": "^10.4.0",
+        "prettier": "^3.6.2",
+        "sass": "^1.94.0",
+        "sass-loader": "^16.0.6",
+        "style-loader": "^4.0.0",
+        "svg-vue3-loader": "^1.0.2",
+        "swc-loader": "^0.2.6",
+        "tailwindcss": "^4.1.17",
+        "terser-webpack-plugin": "^5.3.14",
+        "ts-loader": "^9.5.4",
+        "typescript": "^5.9.3",
+        "vue-loader": "^17.4.2",
+        "webpack": "^5.102.1",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.2",
+        "webpack-env": "^0.8.0"
+    },
+    "dependencies": {
+        "pinia": "^3.0.4",
+        "vue": "^3.5.24"
+    }
 }
